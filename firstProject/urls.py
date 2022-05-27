@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from api.views import *
 from component.views import *
+from template.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +30,6 @@ urlpatterns = [
     path('update-components/', UpdateComponents1.as_view()),
     path('delete-components/', DeleteComponents.as_view()),
     path('get-componentid/', GetComponentId.as_view()),
+    path('get-template/', GetTemplate.as_view()),
 
 ]
