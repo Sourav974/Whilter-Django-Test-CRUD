@@ -33,7 +33,7 @@ class OverlaysSerializer(serializers.ModelSerializer):
 class ComponentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Components
-        fields = '__all__'
+        fields = ['slot_id', 'component_url', 'component_start_time']
 
 
 class TemplateSerializer(serializers.ModelSerializer):
@@ -46,3 +46,10 @@ class TemplateSerializer(serializers.ModelSerializer):
         model = Template
         fields = ['id', 'business', 'types', 'watermark', 'duration',
                   'template_url', 'background_score', 'components', 'overlays']
+
+
+class CreateTemplateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Template
+        fields = '__all__'

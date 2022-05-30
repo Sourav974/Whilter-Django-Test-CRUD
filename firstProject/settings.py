@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'component',
     'template',
+    'super_template',
 ]
 
 MIDDLEWARE = [

@@ -1,23 +1,10 @@
-"""firstProject URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 from api.views import *
 from component.views import *
 from template.views import *
+from super_template.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,5 +18,16 @@ urlpatterns = [
     path('delete-components/', DeleteComponents.as_view()),
     path('get-componentid/', GetComponentId.as_view()),
     path('get-template/', GetTemplate.as_view()),
+    path('create-template/', CreateTemplate.as_view()),
+    path('update-template/', UpdateTemplate.as_view()),
+    path('delete-template/', DeleteTemplate.as_view()),
+    path('get-templateid/', GetTemplateId.as_view()),
+    path('get-super-template/', GetSuperTemplate.as_view()),
+    path('create-super-template/', CreateSuperTemplate.as_view()),
+    path('update-super-template/', UpdateSuperTemplate.as_view()),
+    path('delete-super-template/', DeleteSuperTemplate.as_view()),
+    path('get-super-templateid/', GetTemplateId.as_view())
+
+    # path('get-templateid/', GetTemplateId.as_view()),
 
 ]

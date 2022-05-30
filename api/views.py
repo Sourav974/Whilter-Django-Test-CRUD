@@ -41,6 +41,7 @@ class UpdateComponents(APIView):
         else:
             return serializer.errors
 
+
 # class DeleteComponents(APIView):
 #     def delete(self, request, pk):
 #         erase = Component.objects.get(pk=pk)
