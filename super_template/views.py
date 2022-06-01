@@ -46,12 +46,13 @@ class DeleteSuperTemplate(APIView):
         template = request.GET['template']
         erase = SuperTemplate.objects.get(id=template)
         erase.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg':"data deleted"},status=200)
+
 
 
 class GetSuperTemplateId(APIView):
     def get(self, request):
         template = request.GET['template']
         data = SuperTemplate.objects.get(id=template)
-        serializer = CreateSuperTemplateSerializer(data)
+        serializer = SuperTemplateSerializer(data)
         return Response(serializer.data)

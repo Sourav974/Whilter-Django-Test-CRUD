@@ -54,4 +54,4 @@ class DeleteComponents(APIView):
         component = request.GET['component']
         erase = Component.objects.get(id=component)
         erase.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg':"data deleted"},status=200)

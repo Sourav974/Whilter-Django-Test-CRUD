@@ -49,10 +49,10 @@ class DeleteTemplate(APIView):
         template = request.GET['template']
         erase = Template.objects.get(id=template)
         erase.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg':"data deleted"},status=200)
 
 
-class GetTemplateId(APIView):
+class GetTemplateIdAPI(APIView):
     def get(self, request):
         template = request.GET['template']
         data = Template.objects.get(id=template)
