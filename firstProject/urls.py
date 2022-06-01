@@ -15,18 +15,18 @@ urlpatterns = [
     path('get-components/', GetComponents1.as_view()),
     path('create-components/', CreateComponents1.as_view()),
     path('update-components/', UpdateComponents1.as_view()),
-    path('delete-components/', DeleteComponents.as_view()),
+    path('delete-components/', DeleteComponentsAPI.as_view()),
     path('get-componentid/', GetComponentId.as_view()),
     path('get-template/', GetTemplate.as_view()),
     path('create-template/', CreateTemplate.as_view()),
     path('update-template/', UpdateTemplate.as_view()),
     path('delete-template/', DeleteTemplate.as_view()),
-    path('get-templateid/', GetTemplateId.as_view()),
+    path('get-templateid/', GetTemplateIdAPI.as_view()),
     path('get-super-template/', GetSuperTemplate.as_view()),
     path('create-super-template/', CreateSuperTemplate.as_view()),
     path('update-super-template/', UpdateSuperTemplate.as_view()),
     path('delete-super-template/', DeleteSuperTemplate.as_view()),
-    path('get-super-templateid/', GetTemplateId.as_view())
+    path('get-super-templateid/', GetSuperTemplateId.as_view())
 
     # path('get-templateid/', GetTemplateId.as_view()),
 

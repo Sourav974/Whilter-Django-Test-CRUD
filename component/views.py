@@ -45,12 +45,16 @@ class UpdateComponents1(APIView):
             return serializers.errors
 
 
-class DeleteComponents(APIView):
+class DeleteComponentsAPI(APIView):
+    print("hii")
     def delete(self, request):
+        print("hii")
         component = request.GET['component']
+        print(component)
         erase = Component1.objects.get(id=component)
+        print(erase)
         erase.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg':"data deleted"},status=200)
 
 
 class GetComponentId(APIView):
